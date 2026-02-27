@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KamalSweets" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?android:attr/windowBackground</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Background and surface colors -->
+        <item name="android:windowBackground">@color/surface_dark</item>
+        <item name="colorSurface">@color/card_dark</item>
+        <item name="colorOnSurface">@color/text_primary_dark</item>
+        <item name="colorSurfaceVariant">#2C2C2C</item>
+        <item name="colorOutlineVariant">#3D3D3D</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.KamalSweets.Headline6</item>
+    </style>
+
+    <style name="ThemeOverlay.KamalSweets.SearchView" parent="">
+        <item name="colorControlNormal">?attr/colorOnSurface</item>
+        <item name="android:editTextColor">?attr/colorOnSurface</item>
+        <item name="android:textColorHint">@color/text_secondary_dark</item>
+    </style>
+</resources>

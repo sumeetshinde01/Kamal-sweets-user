@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp">
+
+            <!-- Brand Logo, Title & Profile Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Rounded Logo -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1.5dp"
+                        app:strokeColor="?attr/colorSurfaceVariant">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kamal_sweets"
+                            android:scaleType="centerCrop" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Title & Location -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kamal Sweets"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+                                android:id="@+id/locationText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Home - Near Kamal Sweets"
+                                android:textColor="?attr/colorOnSurface"
+                                android:alpha="0.6"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif-medium"/>
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/search"
+                                android:layout_marginStart="2dp"
+                                app:tint="?attr/colorOnSurface"
+                                android:alpha="0.6"
+                                android:rotation="90"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/themeToggleButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_theme_toggle"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="?attr/colorOnSurface" />
+
+                    <ImageButton
+                        android:id="@+id/options_menu_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_more_vert_24"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="?attr/colorOnSurface" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Refined Search Bar -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_search_bar"
+                app:queryHint="Search 'Gulab Jamun'..."
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:searchIcon="@drawable/search"
+                android:theme="@style/ThemeOverlay.KamalSweets.SearchView" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <!-- Banner Slideshow -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mithais" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Categories Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop by Category"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-black" />
+
+                    <TextView
+                        android:id="@+id/categorySeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="See all"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" />
+                </RelativeLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/category_shimmer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/skeleton_category_item" />
+                        <include layout="@layout/skeleton_category_item" />
+                        <include layout="@layout/skeleton_category_item" />
+                        <include layout="@layout/skeleton_category_item" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/category_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_category_item" />
+            </LinearLayout>
+
+            <!-- Products Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:paddingHorizontal="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popular Items"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-black" />
+
+                    <TextView
+                        android:id="@+id/productSeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="View all"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" />
+                </RelativeLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/product_shimmer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="6dp"
+                        app:columnCount="2"
+                        app:rowCount="2">
+
+                        <include layout="@layout/skeleton_product_item"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"/>
+                        <include layout="@layout/skeleton_product_item"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"/>
+                        <include layout="@layout/skeleton_product_item"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"/>
+                        <include layout="@layout/skeleton_product_item"
+                            android:layout_width="0dp"
+                            app:layout_columnWeight="1"/>
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/product_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/layout_product_item" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

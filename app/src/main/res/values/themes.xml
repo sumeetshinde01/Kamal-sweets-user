@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KamalSweets" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?android:attr/windowBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Background and surface colors -->
+        <item name="android:windowBackground">@color/surface_light</item>
+        <item name="colorSurface">@color/card_light</item>
+        <item name="colorOnSurface">@color/text_primary_light</item>
+        <item name="colorSurfaceVariant">#F1F1F1</item>
+        <item name="colorOutlineVariant">#E0E0E0</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.KamalSweets.Headline6</item>
+    </style>
+
+    <style name="Theme.KamalSweets" parent="Base.Theme.KamalSweets" />
+
+    <style name="TextAppearance.KamalSweets.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ThemeOverlay.KamalSweets.SearchView" parent="">
+        <item name="colorControlNormal">?attr/colorOnSurface</item>
+        <item name="android:editTextColor">?attr/colorOnSurface</item>
+        <item name="android:textColorHint">@color/text_secondary_light</item>
+    </style>
+
+    <style name="Buttoncolor" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

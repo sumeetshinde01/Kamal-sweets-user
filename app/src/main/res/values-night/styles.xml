@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="background">
+        <item name="android:background">@color/surface_dark</item>
+    </style>
+
+    <style name="cardBackground">
+        <item name="android:background">@color/card_dark</item>
+    </style>
+
+    <style name="textColor">
+        <item name="android:textColor">@color/text_primary_dark</item>
+    </style>
+</resources>
